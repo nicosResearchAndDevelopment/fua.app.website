@@ -1,16 +1,23 @@
 #!/usr/bin/env node
 
-// console.log(require('@nrd/fua.resource.ontology.fua/core'));
-
 require('@nrd/fua.core.app').launch({
-    agent: {
-        class: require('@nrd/fua.agent.server'),
-        param: {
-            port: 8080,
-            app:  true
-        }
+    config: {
+        default: require('./config/config.website.js')
     },
-    app:   {
+    agent:  {
+        class:  require('@nrd/fua.agent.server'),
+        param:  {
+            app: true,
+            io:  false
+        },
+        mapper: (config) => ({
+            schema:   config.server.schema,
+            hostname: config.server.hostname,
+            port:     config.server.port,
+            server:   config.server.options
+        })
+    },
+    app:    {
         launch: require('./app.website.js')
     }
 });

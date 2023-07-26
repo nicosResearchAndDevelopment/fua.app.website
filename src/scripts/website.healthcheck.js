@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
 const
+    config         = require('../config/config.website.js'),
+    {URL}          = require('url'),
     https          = require('https'),
     fetch          = require('node-fetch'),
-    homepageURL    = 'https://nicos-rd.com/',
+    // homepageURL    = 'https://nicos-rd.com/',
+    homepageURL    = `${config.server.schema}://${config.server.hostname}:${config.server.port}`,
     requestOptions = {
         method:  'GET',
         headers: {},
