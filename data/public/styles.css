@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #007E72;
+    --secondary-color: #fbaf0b;
+    --primary-dark-color: #00413B;
+    --main-background: #eeeeee;
+    --main-background-rgb: 238, 238, 238;
+    --accent-background: #dddddd;
+    --accent-background-rgb: 221, 221, 221;
+    --text-color: #111111;
+}
+
+* {
+    /*margin: 0;*/
+    /*padding: 0;*/
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+
+body {
+    margin: 0;
+    min-height: 200vh;
+    background: var(--accent-background);
+    color: var(--text-color);
+    --vw: 1920;
+    --vh: 1080;
+    --pw: var(--vw);
+    --ph: var(--vh);
+    --px: 0;
+    --py: 0;
+}
+
+header {
+    --anim: clamp(0, calc(var(--py) / var(--vh)), 1);
+    --anim-rev: calc(1 - var(--anim));
+
+    background: var(--primary-color);
+    height: 100vh;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+    position: fixed;
+    width: calc(800px * var(--anim-rev) + 100% * var(--anim));
+    height: calc(100px + 100px * var(--anim-rev));
+    left: calc((50vw - 400px) * var(--anim-rev));
+    top: calc((50vh - 100px) * var(--anim-rev));
+    padding: 15px;
+    background: rgba(var(--main-background-rgb), var(--anim));
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, calc(0.5 * var(--anim)));
+}
+
+header .logo {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+header .scroll-down {
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    left: calc(50% - 40px);
+    bottom: 15px;
+    font-size: 80px;
+    text-align: center;
+    line-height: 68px;
+    color: var(--main-background);
+    transform-origin: center center;
+    transform: rotate(calc(90deg - 180deg * clamp(0, 5 * var(--anim), 1)));
+    text-decoration: none;
+    opacity: clamp(0, calc(2 * var(--anim-rev) - 1), 1);
+}
+
+main {
+    width: 1200px;
+    max-width: 100%;
+    margin: 150px auto 50px;
+    padding: 30px;
+    background: var(--main-background);
+}

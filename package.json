@@ -1,0 +1,41 @@
+{
+  "name": "@nrd/fua.app.website",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "fua.app.website": "./src/launch.website.js",
+    "fua.app.website.healthcheck": "./src/scripts/website.healthcheck.js"
+  },
+  "files": [
+    "src/*",
+    "data/*"
+  ],
+  "dependencies": {
+    "express": "^4.17.1",
+    "@nrd/fua.agent.server": "^1.0.1",
+    "@nrd/fua.core.app": "^1.0.2",
+    "@nrd/fua.core.util": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1",
+    "expect": "^26.6.2"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node src/launch.website.js",
+    "healthcheck": "node src/scripts/website.healthcheck.js"
+  },
+  "mocha": {
+    "bail": false,
+    "recursive": false,
+    "spec": "test/*.test.js",
+    "parallel": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git02.int.nsc.ag:10022/research/fua/app/nrd-website.git"
+  },
+  "keywords": [],
+  "author": "spetrac@nicos-ag.com",
+  "license": "UNLICENSED"
+}
