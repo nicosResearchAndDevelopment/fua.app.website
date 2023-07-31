@@ -1,0 +1,15 @@
+{
+  "@context": "fua.load.rdf",
+  "dct:identifier": "./load.server.json",
+  "dct:format": "application/fua.load+json",
+  "dct:title": "load.server.json",
+  "dct:alternative": "Website Server Loader",
+  "dct:requires": [
+    {
+      "dct:identifier": "./root.ttl",
+      "dct:format": "text/turtle",
+      "dct:title": "root.ttl",
+      "dct:alternative": "Server Root"
+    }
+  ]
+}

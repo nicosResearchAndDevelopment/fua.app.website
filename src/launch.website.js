@@ -11,9 +11,12 @@ require('@nrd/fua.core.app').launch({
             io:  false
         },
         mapper: (config) => ({
+            uri:      config.space.uri,
             schema:   config.server.schema,
             hostname: config.server.hostname,
             port:     config.server.port,
+            context:  config.space.context,
+            store:    config.space.store,
             server:   config.server.options
         })
     },

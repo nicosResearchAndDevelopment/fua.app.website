@@ -1,8 +1,8 @@
 const
-    path          = require('path'),
-    util          = require('@nrd/fua.core.util'),
-    express       = require('express'),
-    fuaMiddleware = require('./code/middleware.fua.js');
+    path     = require('path'),
+    util     = require('@nrd/fua.core.util'),
+    express  = require('express'),
+    ontology = require('./code/middleware.ontology.js');
 
 module.exports = async function WebsiteApp(
     {
@@ -13,7 +13,7 @@ module.exports = async function WebsiteApp(
 
     util.assert(agent.app, 'expected app to be enabled');
 
-    agent.app.use(fuaMiddleware());
+    agent.app.use(ontology.fua());
     agent.app.use(express.static(path.join(__dirname, '../data/public')));
 
     await agent.listen();

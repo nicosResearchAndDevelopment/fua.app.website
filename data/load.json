@@ -1,0 +1,21 @@
+{
+  "@context": "fua.load.rdf",
+  "dct:identifier": "./load.json",
+  "dct:format": "application/fua.load+json",
+  "dct:title": "load.json",
+  "dct:alternative": "Website Loader",
+  "dct:requires": [
+    {
+      "dct:identifier": "./server/load.server.json",
+      "dct:format": "application/fua.load+json",
+      "dct:alternative": "Website Server"
+    },
+    {
+      "@id": "file://data.ttl",
+      "dct:identifier": "./data.ttl",
+      "dct:format": "text/turtle",
+      "dct:title": "data.ttl",
+      "dct:alternative": "Website Data"
+    }
+  ]
+}
