@@ -18,8 +18,8 @@
     "@nrd/fua.module.rdf": "^1.0.0",
     "@nrd/fua.module.persistence": "^1.0.0",
     "@nrd/fua.module.persistence.inmemory": "^1.0.0",
-    "@nrd/fua.resource.context": "^1.0.0",
-    "@nrd/fua.resource.ontology.fua": "^1.0.0"
+    "@nrd/fua.resource.context": "^1.0.2",
+    "@nrd/fua.resource.ontology.fua": "^1.0.1"
   },
   "devDependencies": {
     "mocha": "^8.2.1",
