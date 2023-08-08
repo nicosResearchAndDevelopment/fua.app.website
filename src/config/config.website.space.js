@@ -5,7 +5,7 @@ const
 exports.uri = 'https://www.nicos-rd.com/';
 
 exports.context = {
-    ...require('@nrd/fua.resource.data/context'),
+    ...require('@nrd/fua.resource.context'),
 
     'fua': 'https://www.nicos-rd.com/fua#',
     'dom': 'https://www.nicos-rd.com/fua/domain#'

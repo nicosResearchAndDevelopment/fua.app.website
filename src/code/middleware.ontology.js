@@ -4,7 +4,7 @@ const
     express        = require('express'),
     rdf            = require('@nrd/fua.module.rdf'),
     {TermFactory}  = require('@nrd/fua.module.persistence'),
-    defaultContext = require('@nrd/fua.resource.data/context'),
+    defaultContext = require('@nrd/fua.resource.context'),
     defaultFactory = new TermFactory(defaultContext);
 
 /**
