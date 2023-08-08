@@ -32,11 +32,16 @@ ontology.fua = function fuaMiddleware() {
     rdf.loadDataFiles(fuaConfig, defaultFactory).then((fuaFiles) => {
         /** @type {{[part: string]: fua.module.persistence.Dataset}} */
         const fuaData = Object.fromEntries(fuaFiles.filter(_ => _.dataset).map(_ => [_.title.replace('fua.', ''), _.dataset]));
+        console.log(fuaData);
         fuaData.core.add(fuaData.ontology);
 
         fuaRouter.get('/fua', DataGetter(fuaData.core, 'text/turtle', 'application/ld+json'));
         fuaRouter.get('/fua.ttl', DataGetter(fuaData.core, 'text/turtle'));
         fuaRouter.get('/fua.json', DataGetter(fuaData.core, 'application/ld+json'));
+
+        fuaRouter.get('/fua/domain', DataGetter(fuaData.domain, 'text/turtle', 'application/ld+json'));
+        fuaRouter.get('/fua/domain.ttl', DataGetter(fuaData.domain, 'text/turtle'));
+        fuaRouter.get('/fua/domain.json', DataGetter(fuaData.domain, 'application/ld+json'));
 
         util.logDone('fua ontology loaded');
     }).catch(util.logError);
