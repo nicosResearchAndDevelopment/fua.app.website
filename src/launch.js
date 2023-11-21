@@ -3,7 +3,7 @@
 const
     path     = require('path'),
     App      = require('@nrd/fua.agent.app'),
-    ontology = require('./code/ontology.js');
+    ontology = require('./app/ontology.js');
 
 App.launch({
     space:  {

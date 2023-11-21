@@ -1,7 +1,7 @@
 const
     ontology       = exports,
-    tty            = require('@nrd/fua.core.tty'),
     express        = require('express'),
+    tty            = require('@nrd/fua.core.tty'),
     rdf            = require('@nrd/fua.module.rdf'),
     {TermFactory}  = require('@nrd/fua.module.persistence'),
     defaultContext = require('@nrd/fua.resource.context'),
