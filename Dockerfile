@@ -1,4 +1,4 @@
-FROM node:lts-alpine AS builder
+FROM node:lts AS builder
 
 # 1. Set default arguments and environment for the builder.
 
