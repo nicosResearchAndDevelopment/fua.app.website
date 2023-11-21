@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "bin": {
-    "fua.app.website": "./src/website.js",
+    "fua.app.website": "./src/launch.js",
     "fua.app.website.healthcheck": "./src/script/healthcheck.js"
   },
   "files": [
