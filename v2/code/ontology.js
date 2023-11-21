@@ -32,7 +32,7 @@ ontology.fua = function fuaMiddleware() {
     rdf.loadDataFiles(fuaConfig, defaultFactory).then((fuaFiles) => {
         /** @type {{[part: string]: fua.module.persistence.Dataset}} */
         const fuaData = Object.fromEntries(fuaFiles.filter(_ => _.dataset).map(_ => [_.title.replace('fua.', ''), _.dataset]));
-        console.log(fuaData);
+        tty.log(fuaData);
         fuaData.core.add(fuaData.ontology);
 
         fuaRouter.get('/fua', DataGetter(fuaData.core, 'text/turtle', 'application/ld+json'));
