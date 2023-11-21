@@ -11,7 +11,7 @@ ENV NODE_ENV="production"
 
 RUN mkdir -p /opt/fua
 WORKDIR /opt/fua
-RUN echo -e "@nrd:registry=${NRD_REGISTRY}\n${NRD_REGISTRY#http*:}:_authToken=${NPM_TOKEN}" >> /usr/local/bin/npm/npmrc
+RUN echo -e "@nrd:registry=${NRD_REGISTRY}\n${NRD_REGISTRY#http*:}:_authToken=${NPM_TOKEN}" >> /usr/local/lib/node_modules/npm/npmrc
 
 # 3. Install the application via npm.
 
