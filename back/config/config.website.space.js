@@ -5,14 +5,14 @@ const
 exports.uri = 'https://www.nicos-rd.com/';
 
 exports.context = {
-    ...require('@nrd/fua.resource.context'),
+    ...require('@fua/resource.context'),
 
     'fua': 'https://www.nicos-rd.com/fua#',
     'dom': 'https://www.nicos-rd.com/fua/domain#'
 };
 
 exports.store = {
-    module:  '@nrd/fua.module.persistence.filesystem',
+    module:  '@fua/module.persistence.filesystem',
     options: {
         defaultFile: 'file://data.ttl',
         loadFiles:   [

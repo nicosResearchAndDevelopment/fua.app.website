@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-require('@nrd/fua.core.app').launch({
+require('@fua/core.app').launch({
     config: {
         default: require('./config/config.website.js')
     },
     agent:  {
-        class:  require('@nrd/fua.agent.server'),
+        class:  require('@fua/agent.server'),
         param:  {
             app: true,
             io:  false

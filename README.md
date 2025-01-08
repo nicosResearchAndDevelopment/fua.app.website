@@ -1,1 +1,1 @@
-# @nrd/fua.app.website
+# @fua/app.website

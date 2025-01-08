@@ -1,6 +1,6 @@
 const
     path     = require('path'),
-    util     = require('@nrd/fua.core.util'),
+    util     = require('@fua/core.util'),
     express  = require('express'),
     ontology = require('./code/middleware.ontology.js');
 

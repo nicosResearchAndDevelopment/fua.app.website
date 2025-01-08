@@ -2,7 +2,7 @@
 
 const
     path     = require('path'),
-    App      = require('@nrd/fua.agent.app'),
+    App      = require('@fua/agent.app'),
     ontology = require('./app/ontology.js');
 
 App.launch({

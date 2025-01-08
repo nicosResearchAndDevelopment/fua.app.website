@@ -1,10 +1,10 @@
 const
     ontology       = exports,
     express        = require('express'),
-    tty            = require('@nrd/fua.core.tty'),
-    rdf            = require('@nrd/fua.module.rdf'),
-    {TermFactory}  = require('@nrd/fua.module.persistence'),
-    defaultContext = require('@nrd/fua.resource.context'),
+    tty            = require('@fua/core.tty'),
+    rdf            = require('@fua/module.rdf'),
+    {TermFactory}  = require('@fua/module.persistence'),
+    defaultContext = require('@fua/resource.context'),
     defaultFactory = new TermFactory(defaultContext);
 
 /**
@@ -26,7 +26,7 @@ function DataGetter(dataset, ...contentTypes) {
 
 ontology.fua = function fuaMiddleware() {
     const
-        fuaConfig = require('@nrd/fua.resource.ontology.fua'),
+        fuaConfig = require('@fua/resource.ontology.fua'),
         fuaRouter = express.Router({caseSensitive: true, strict: true});
 
     rdf.loadDataFiles(fuaConfig, defaultFactory).then((fuaFiles) => {

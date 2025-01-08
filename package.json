@@ -1,6 +1,6 @@
 {
-  "name": "@nrd/fua.app.website",
-  "version": "1.1.1",
+  "name": "@fua/app.website",
+  "version": "0.0.0-dev",
   "description": "",
   "bin": {
     "fua.app.website": "./src/launch.js",
@@ -12,17 +12,17 @@
   ],
   "dependencies": {
     "express": "^4.21.1",
-    "@nrd/fua.agent.app": "^1.0.0",
-    "@nrd/fua.core.tty": "^1.0.0",
-    "@nrd/fua.module.rdf": "^1.0.0",
-    "@nrd/fua.module.persistence": "^1.0.0",
-    "@nrd/fua.module.persistence.filesystem": "^1.0.0",
-    "@nrd/fua.resource.context": "^1.0.2",
-    "@nrd/fua.resource.ontology.fua": "^1.0.1"
+    "@fua/agent.app": "^1.0.0",
+    "@fua/core.tty": "^1.0.0",
+    "@fua/module.rdf": "^1.0.0",
+    "@fua/module.persistence": "^1.0.0",
+    "@fua/module.persistence.filesystem": "^1.0.0",
+    "@fua/resource.context": "^1.0.2",
+    "@fua/resource.ontology.fua": "^1.0.1"
   },
   "devDependencies": {
-    "mocha": "^8.2.1",
-    "expect": "^26.6.2"
+    "expect": "26.x",
+    "mocha": "10.x"
   },
   "scripts": {
     "test": "mocha",
@@ -32,14 +32,12 @@
   "mocha": {
     "bail": false,
     "recursive": false,
-    "spec": "test/*.test.js",
-    "parallel": false
+    "spec": "test/*.test.js"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@git02.int.nsc.ag:10022/research/fua/app/website.git"
+    "url": "ssh://git@github.com:nicosResearchAndDevelopment/fua.app.website.git"
   },
-  "keywords": [],
-  "author": "spetrac@nicos-ag.com",
-  "license": "UNLICENSED"
+  "author": "Simon Petrac <pfoerdie@gmail.com>",
+  "license": "MIT"
 }
